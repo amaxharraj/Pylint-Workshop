@@ -1,2 +1,2 @@
 # Pylint-Workshop
-Repository für den Pylint-Workshop am 16.06.2024
+Repository für den Pylint-Workshop am 27.06.2024
