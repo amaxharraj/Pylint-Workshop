@@ -9,6 +9,6 @@ def calculate_circle_area(radius):
     area = pi * radius ** 2
     return area
 
-radius = 5 
-circle_area = calculate_circle_area(radius)
-print("Area of the circle:", circle_area)
+RADIUS = 5
+CIRCLE_AREA = calculate_circle_area(RADIUS)
+print("Area of the circle:", CIRCLE_AREA)
