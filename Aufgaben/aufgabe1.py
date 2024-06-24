@@ -1,9 +1,13 @@
 #AUFGABE 1
 
-# a) Erstellung einer Konfigurationsdatei und "UPPER_CASE"-Warnung entfernen bzw. unterdrücken.
+# a) Verbessere den Code aus der Einführung (Calculations_2.py)
 
-#    'pylint --generate-rcfile > workshop.pylintrc'
-#    'TIPP: Cheat-Sheet (Messages Controll)'
+def calc(r):
+    p=3.14159
+    a=p*r**2
+    return a
 
 
-# b) Verbessere den Code aus der Einführung (Calculations_2.py)
+rad=5
+area=calc(rad)
+print("Area", area)
