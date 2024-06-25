@@ -13,13 +13,13 @@ class Order:
         self.order_date = order_date
         self.products = products
     
-    def calculate_total_price(self):
+    def Calculate_total_price(self):
         total_price = 0
         for product in self.products:
             total_price += product['price'] * product['quantity']
         return total_price
     
-    def print_order_details(self):
+    def Print_order_details(self):
         print("Order Details:")
         print(f"Customer: {self.customer_name}")
         print(f"Date: {self.order_date}")
@@ -34,8 +34,9 @@ def main():
         {'name': 'Product C', 'price': 15, 'quantity': 3},
     ]
     order = Order("John Doe", "2023-06-24", products)
-    order.calculate_total_price()
-    order.print_order_details()
+    order.Calculate_total_price()
+    order.Print_order_details()
 
 if __name__ == "__main__":
     main()
+

@@ -9,12 +9,12 @@ def Get_Product_input():
     name = input("Enter product name (or 'stop' to finish): ")
     if name.lower() == 'stop':
         return None
-    price = float(input("Enter product price: "))
-    quantity = int(input("Enter product quantity: "))
-    return {'name': name, 'price': price, 'quantity': quantity}
+    P = float(input("Enter product price: "))
+    Q = int(input("Enter product quantity: "))
+    return {'name': name, 'price': P, 'quantity': Q}
 
 def DisplayProduct(pr):
-    print("Product:" + pr['name'] + ",price:" + str(pr['price']) + ", Quantity:" + str(pr['quantity']))
+    print("Prdct:" + pr['name'] + ",price:" + str(pr['price']) + ", Quantity:" + str(pr['quantity']))
 
 def main():
     products = []
@@ -29,4 +29,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# b) Verbessert den folgenden Code zur Kundenbestellung:
+# b) EXKURS: Continous Integration (CI/CD) mit Pylint in GitHub
