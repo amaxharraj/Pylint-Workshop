@@ -1,6 +1,7 @@
 #AUFGABE 1
 
-# a) Verbessere den Code aus der Einführung (Calculations_2.py)
+# a) Versuche folgenden Code zu verbessern
+# TIPP: pylint --help
 
 def calc(r):
     p=3.14159
