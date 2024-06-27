@@ -1,33 +1,39 @@
-#AUFGABE 3
+#AUFGABE 4
 
 # Stellt euch vor Ihr arbeitet in einem Unternehmen, welches
 # einfache Python-Anwendungen zur Verwaltung von Produkten und Kundenbestellungen entwickelt hat.
 
-# a) Im folgenden Code für die Verwaltung von Produkten haben sich Fehler eingeschlichen.
-# Verbessere den Code
- 
-def Get_Product_Input():
-    name = input("Enter product name (or 'stop' to finish): ")
-    if name.lower() == 'stop':
-        return None
-    P = float(input("Enter product price: "))
-    Q = int(input("Enter product quantity: "))
-    return {'name': name, 'price': P, 'quantity': Q}
+# a) Verbessert den folgenden Code:
 
-def displayproduct(pr):
-    print("Prdct:" + pr['name'] + ",price:" + str(pr['price']) + ", Quantity:" + str(pr['quantity']))
+class Order:
+    def __init__(self, Customer_Name, Order_Date, Product):
+        self.customer_name = Customer_Name
+        self.order_date = Order_Date
+        self.products = Product
+
+    def Calculate_Total_Price(self):
+        total_price = 0
+        for product in self.products:
+            total_price += product['preis'] * product['anzahl']
+        return total_price
+
+    def Print_Order_Details(self):
+        print("Order Details:")
+        print(f"Customer: {self.customer_name}")
+        print(f"Date: {self.order_date}")
+        print("Products:")
+        for product in self.products:
+            print(f"- {product['name']}: ${product['price']} x {product['quantity']}")
 
 def main():
-    products = []
-    while True:
-        product = Get_Product_input()
-        if product == None:
-            break
-        products.append(product)
-    for p in products:
-        DisplayProduct(p)
+    product = [
+        {'name': 'Product A', 'price': 10, 'quantity': 2},
+        {'name': 'Product B', 'price': 20, 'quantity': 1},
+        {'name': 'Product C', 'price': 15, 'quantity': 3},
+    ]
+    order = Order("Max Mustermann", "2023-06-27", product)
+    order.Calculate_Total_Price()
+    order.Print_Order_Details()
 
 if __name__ == "__main__":
     main()
-
-# b) EXKURS: Continous Integration (CI/CD) mit Pylint in GitHub

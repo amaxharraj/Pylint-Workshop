@@ -1,45 +1,34 @@
-#AUFGABE 4
+#AUFGABE 3
 
-# Das Unternehmen hat ebenfalls Python-Skripte
-# zur Verwaltung von Kundenbestellungen
 
-# a) Verbessert den folgenden Code:
+# a) Im folgenden Code für die Verwaltung von Produkten haben sich einige Fehler eingeschlichen.
+#    Verbessere den Code.
+ 
+def Get_Product_Input():
+    name = input("Produktname(oder 'stop' zum Beenden): ")
+    if name.lower() == 'stop':
+        return None
+    P = float(input("Produktpreis: "))
+    A = int(input("Produktanzahl: "))
+    return {'name': name, 'preis': P, 'anzahl': A}
 
-# Beispielcode für Pylint-Workshop: Kundenbestellungen verwalten
-'''Verwaltung von Kundenbestellungen'''
-class Order:
-    '''Klasse zu Kundenbestellungen'''
-    def __init__(self, customer_name, order_date, products):
-        self.customer_name = customer_name
-        self.order_date = order_date
-        self.products = products
-
-    def calculate_total_price(self):
-        '''Preisberechnung'''
-        total_price = 0
-        for product in self.products:
-            total_price += product['price'] * product['quantity']
-        return total_price
-
-    def print_order_details(self):
-        '''Verarbeitung der Bestellungsdetails'''
-        print("Order Details:")
-        print(f"Customer: {self.customer_name}")
-        print(f"Date: {self.order_date}")
-        print("Products:")
-        for product in self.products:
-            print(f"- {product['name']}: ${product['price']} x {product['quantity']}")
+def displayproduct(pr):
+    print("Produkt:" + pr['name'] + ",Preis:" + (pr['preis']) + ", Anzahl:" + str(pr['anzahl']))
 
 def main():
-    '''Funktion zur Anwendung'''
-    product = [
-        {'name': 'Product A', 'price': 10, 'quantity': 2},
-        {'name': 'Product B', 'price': 20, 'quantity': 1},
-        {'name': 'Product C', 'price': 15, 'quantity': 3},
-    ]
-    order = Order("Max Mustermann", "2023-06-27", product)
-    order.calculate_total_price()
-    order.print_order_details()
+    products = []
+    while True:
+        Product = Get_Product_input()
+        if product == None:
+            break
+        products.append(Product)
+    for p in products:
+        DisplayProduct(p)
 
 if __name__ == "__main__":
     main()
+
+
+
+
+

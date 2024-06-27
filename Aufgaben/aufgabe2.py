@@ -3,11 +3,13 @@
 # a) Versuche eine Konfigurationsdatei zu erstellen
 # TIPP: Nutze pylint --help zur Hilfe
 
-# b) Wo könnte man bspw. die ungewollten Nachrichten (messages) ausschalten?
+# b) Überlegt euch wie man bspw. ungewollte Meldungen (messages) ausschalten könnte.
 
 # c) Wie könnte man folgenden Code verbessern
 
+'''Modul'''
 def complex_function(x):
+    '''Funktion'''
     if x > 0:
         if x > 10:
             if x > 20:
@@ -19,5 +21,3 @@ def complex_function(x):
                                     print("Hallo Welt")
                                 else:
                                     print("Hallo -Welt")
-
-
