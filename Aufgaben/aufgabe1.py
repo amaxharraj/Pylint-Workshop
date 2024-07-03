@@ -2,13 +2,14 @@
 
 # a) Versuche folgenden Code zu verbessern
 # TIPP: pylint --help
-
+'''Modul'''
 def calc(r):
+    '''Funktion'''
     p=3.14159
     a=p*r**2
     return a
 
 
-rad=5
-area=calc(rad)
-print("Area", area)
+RAD=5
+AREA=calc(RAD)
+print("Area", AREA)
