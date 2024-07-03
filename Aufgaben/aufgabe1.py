@@ -10,6 +10,6 @@ def calc(r):
     return a
 
 
-RAD=5
-AREA=calc(RAD)
+rad=5
+AREA=calc(rad)
 print("Area", AREA)
